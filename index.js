@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
             res.end(body)
         }
         else {
-            msg('warn', req.socket.remoteAddress + ' requested a url:  ' + url + ' but we cant connect to the host')
+            msg('warn', req.socket.remoteAddress + " requested a url:  " + url + " but we cannno't connect to the host")
             res.statusCode = 502
             res.end()
         }
