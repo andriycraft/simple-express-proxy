@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
     var url = req.query.url
     if (!url) { res.statusCode = 400 }
     request(url, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
+        if (!error) {
             msg('info', req.socket.remoteAddress + ' requested a url ' + url)
             res.end(body)
         }
