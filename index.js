@@ -21,6 +21,7 @@ function consolecolors(color) {
             break;
     }
 }
+
 function msg(color, message) {
     console.log(consolecolors(color) + message)
 }
@@ -41,10 +42,7 @@ app.get('/', function (req, res) {
     })
 })
 
-app.get('*', function (req, res) {
-    res.statusCode = 404
-    res.end()
-})
+app.get('*', function (req, res) { res.statusCode = 404; res.end(); })
 
 app.listen(81);
 msg('info', 'Proxy listening on port 81');
