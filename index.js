@@ -44,5 +44,5 @@ app.get('/', function (req, res) {
 
 app.get('*', function (req, res) { res.statusCode = 404; res.end(); })
 
-app.listen(81);
+app.listen(80);
 msg('info', 'Proxy listening on port 81');
