@@ -33,12 +33,11 @@ app.get('/', function (req, res) {
         if (!error) {
             msg('info', req.socket.remoteAddress + ' requested a url ' + url)
             res.end(body)
+            return;
         }
-        else {
-            msg('warn', req.socket.remoteAddress + " requested a url:  " + url + " but we cannno't connect to the host")
-            res.statusCode = 502
-            res.end()
-        }
+        msg('warn', req.socket.remoteAddress + " requested a url:  " + url + " but we cannnot connect to the host")
+        res.statusCode = 502
+        res.end()
     })
 })
 
