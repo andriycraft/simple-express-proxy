@@ -4,20 +4,14 @@ const app = express();
 
 function consolecolors(color) {
     switch (color) {
-        case 'err':
-            return '\x1b[31m';
-            break;
         case 'warn':
             return '\x1b[33m';
             break;
         case 'info':
             return '\x1b[32m';
             break;
-        case 'debug':
-            return '\x1b[1m'
-            break;
         default:
-            throw new Error('Invalid console message level. It must be one of: err, warn, info, debug')
+            throw new Error('Invalid console message level. It must be one of: warn, info')
             break;
     }
 }
